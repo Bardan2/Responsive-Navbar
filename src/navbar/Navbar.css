@@ -1,0 +1,58 @@
+.navbarList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.links li {
+    padding: 2rem;
+    list-style: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+    h1 {
+        font-size: 25px;
+        padding: 20px 0;
+    }
+    
+    .links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: -110%;
+        top: 0;
+        z-index: -3;
+        background: #a5a5a5;
+        transition: 0.5s;
+
+    }
+
+    .links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: inline;
+    }
+
+}
